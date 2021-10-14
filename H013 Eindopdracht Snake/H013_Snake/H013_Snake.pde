@@ -68,20 +68,25 @@ void draw(){
   }
 }
 
+
 void tail(){
   if(snakeTailX.size() > 0){
-  int[] kopieTailX = new int[snakeTailX.size()];
-  int[] kopieTailY = new int[snakeTailY.size()];
-  for(int i = 0; i < snakeTailX.size(); i++){
-    kopieTailX[i] = snakeTailX.get(i);
-    kopieTailY[i] = snakeTailY.get(i);
-  }
-  snakeTailX.set(0,x);
-  snakeTailY.set(0,y);
-  for(int i =1; i <snakeTailX.size(); i++){
-    snakeTailX.set(i,kopieTailX[i - 1]);
-    snakeTailY.set(i,kopieTailY[i - 1]); 
-  }
+    int[] kopieTailX = new int[snakeTailX.size()];
+    int[] kopieTailY = new int[snakeTailY.size()];
+        
+    
+    for(int i = 0; i < snakeTailX.size(); i++){
+      kopieTailX[i] = snakeTailX.get(i);
+      kopieTailY[i] = snakeTailY.get(i);
+    }
+    
+    snakeTailX.set(0,x);
+    snakeTailY.set(0,y);
+    
+    for(int i =1; i <snakeTailX.size(); i++){
+      snakeTailX.set(i,kopieTailX[i - 1]);
+      snakeTailY.set(i,kopieTailY[i - 1]); 
+    }
   }
 }
 
